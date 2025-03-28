@@ -1,5 +1,9 @@
-import { useState } from 'react'
-import './App.css'
+import { useEffect, useState } from 'react';
+import * as starshipService from './services/starshipService';
+import StarshipSearch from './components/StarshipSearch/StarshipSearch';
+import StarshipList from './components/StarshipList/StarshipList';
+
+
 
 const App = () => {
 
