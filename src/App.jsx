@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import * as starshipService from './services/starshipService';
 import StarshipSearch from './components/StarshipSearch/StarshipSearch';
 import StarshipList from './components/StarshipList/StarshipList';
+import './App.css';
 
 
 
@@ -41,7 +42,7 @@ const App = () => {
 
   return (
     <main>
-      <h1>Star Wars API</h1>
+      <h1 className='title'>Star Wars API</h1>
       <StarshipSearch 
          onSearch={handleSearch}
          lastQuery={lastQuery}
