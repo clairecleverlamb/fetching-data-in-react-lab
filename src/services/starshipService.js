@@ -1,13 +1,11 @@
-
-
-const show = async (starship) => {
+const show = async () => {
     try{
-        const queryString = `?q=${starship}`;
-        throw new Error('Failed to fetch starships.');
-        const res = await fetch(BASE_URL + queryString);
+        const res = await fetch('https://swapi.dev/api/starships/');
+        if (!res.ok) {
+          throw new Error('Failed to fetch starships.');
+        }
         const data = await res.json();
-        console.log(data);
-        return data;
+        return data.results;
     } catch(error) {
         console.log(error);
     }
