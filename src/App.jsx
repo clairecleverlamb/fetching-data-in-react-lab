@@ -29,7 +29,10 @@ const App = () => {
 
   const handleSearch = (query) => {
     const filtered = starshipData.filter((s) => 
-      s.name.toLowerCase().includes(query.toLowerCase())
+      s.name.toLowerCase().includes(query.toLowerCase()) ||
+      s.model.toLowerCase().includes(query.toLowerCase()) ||
+      s.manufacturer.toLowerCase().includes(query.toLowerCase()) ||
+      s.starship_class.toLowerCase().includes(query.toLowerCase())
     );
     setDisplayedStarships(filtered);
     setLastQuery(query);
