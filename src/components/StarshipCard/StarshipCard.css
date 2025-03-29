@@ -1,0 +1,25 @@
+.starship-card {
+    background: rgba(30, 30, 30, 0.85);
+    border: 1px solid #444;
+    border-radius: 12px;
+    padding: 1rem;
+    margin: 1rem;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .starship-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+  }
+  
+  .starship-card h3 {
+    color: #00ffff;
+    margin-bottom: 0.5rem;
+  }
+  
+  .starship-card p {
+    color: #cccccc;
+    margin: 0.25rem 0;
+  }
+  

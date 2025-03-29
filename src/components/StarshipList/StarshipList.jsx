@@ -1,4 +1,4 @@
-
+import './starshipList.css';
 import StarshipCard from '../StarshipCard/StarshipCard';
 
 const StarshipList = ({ starships, loading }) => {

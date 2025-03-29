@@ -1,0 +1,158 @@
+
+:root {
+    --space-black: #0d0d0d;
+    --galaxy-blue: #00b7eb;
+    --lightsaber-glow: #00d4ff;
+    --starship-gray: #b0b0b0;
+    --force-yellow: #ffd700;
+    --animation-speed: 0.5s;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--starship-gray);
+}
+
+h2 {
+    font-family: 'Star Jedi';
+    src: url('./assets/Starjedi.ttf') format('truetype');
+    color: #f95b37; 
+    font-size: 1.6rem;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(102, 141, 199, 0.511); 
+  }
+
+
+@keyframes hyperspaceFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.typing-header {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px var(--galaxy-blue);
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid var(--lightsaber-glow); 
+    animation: 
+        typing 3s steps(23, end) forwards, 
+        blink 0.75s step-end infinite; 
+}
+
+.search-section {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(20, 20, 20, 0.9);
+    border: 2px solid var(--galaxy-blue);
+    border-radius: 10px;
+    box-shadow: 0 0 15px var(--lightsaber-glow);
+    animation: hyperspaceFade var(--animation-speed) ease-out;
+}
+
+
+.search-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: var(--force-yellow);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 5px var(--galaxy-blue);
+}
+
+.search-meta p {
+    margin: 0;
+}
+
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 1.1rem;
+    color: var(--starship-gray);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.search-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+input#starship {
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    background: var(--space-black);
+    color: var(--force-yellow);
+    border: 1px solid var(--galaxy-blue);
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px var(--lightsaber-glow);
+    transition: all 0.3s ease;
+}
+
+input#starship:focus {
+    outline: none;
+    border-color: var(--lightsaber-glow);
+    box-shadow: 0 0 10px var(--lightsaber-glow);
+}
+
+input#starship::placeholder {
+    color: rgba(176, 176, 176, 0.7);
+    font-style: italic;
+}
+
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: var(--galaxy-blue);
+    color: var(--space-black);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px var(--lightsaber-glow);
+}
+
+button:hover {
+    background: var(--lightsaber-glow);
+    box-shadow: 0 0 15px var(--lightsaber-glow);
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:last-child {
+    background: var(--starship-gray);
+    color: var(--space-black);
+}
+
+button:last-child:hover {
+    background: var(--force-yellow);
+    box-shadow: 0 0 15px var(--force-yellow);
+}
